@@ -1,7 +1,12 @@
+
+
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.android)
+  alias(libs.plugins.navigation.safeargs)
 }
+
+
 
 android {
   namespace = "vn.edu.hust.studentman"
@@ -39,7 +44,12 @@ dependencies {
   implementation(libs.material)
   implementation(libs.androidx.activity)
   implementation(libs.androidx.constraintlayout)
-  testImplementation(libs.junit)
+    implementation(libs.androidx.navigation.fragment)
+    implementation(libs.androidx.fragment)
+  implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.recyclerview)
+    testImplementation(libs.junit)
   androidTestImplementation(libs.androidx.junit)
   androidTestImplementation(libs.androidx.espresso.core)
-}
+  implementation(libs.androidx.navigation.fragment.ktx)
+  }
